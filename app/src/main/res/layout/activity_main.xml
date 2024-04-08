@@ -9,22 +9,23 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="1dp">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="51dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="-4dp"
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="Read the button for further instructions"
             tools:layout_editor_absoluteX="177dp"
             tools:layout_editor_absoluteY="483dp" />
 
@@ -32,7 +33,7 @@
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button"
+            android:text="Push Me"
             tools:layout_editor_absoluteX="165dp"
             tools:layout_editor_absoluteY="524dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
