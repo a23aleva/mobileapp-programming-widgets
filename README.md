@@ -1,42 +1,21 @@
 
 # Rapport
 
-**Skriv din rapport här!**
+Inuti activity_main.xml har jag lagt till en ny constraintlayout där jag sedan lade till tre olika widgets. Här valde jag att använda mig av en textView, en imageView och en button. I min constraintlayout använde jag mig av attributmenyn för att ändra dess bakgrundsfärg till en grön nyans. I mina widgets har jag lagt till constraints för att testa olika positioner på dem. I imageViewn började jag med att lägga in en placeholder-bild för att sedan ta en screenshot från internet i png som jag sedan importerade som drawable i android studio och satte som image. I bilden ändrade jag dess storlek och gav en contentdescription. Efter det har jag ändrat constraints mellan widgetarna för att ändra deras positioner gentemot varandra för en mer estetisk layout. Jag har även använt mig av ett stort antal commits till github.
 
-_Du kan ta bort all text som finns sedan tidigare_.
-
-## Följande grundsyn gäller dugga-svar:
-
-- Ett kortfattat svar är att föredra. Svar som är längre än en sida text (skärmdumpar och programkod exkluderat) är onödigt långt.
-- Svaret skall ha minst en snutt programkod.
-- Svaret skall inkludera en kort övergripande förklarande text som redogör för vad respektive snutt programkod gör eller som svarar på annan teorifråga.
-- Svaret skall ha minst en skärmdump. Skärmdumpar skall illustrera exekvering av relevant programkod. Eventuell text i skärmdumpar måste vara läsbar.
-- I de fall detta efterfrågas, dela upp delar av ditt svar i för- och nackdelar. Dina för- respektive nackdelar skall vara i form av punktlistor med kortare stycken (3-4 meningar).
-
-Programkod ska se ut som exemplet nedan. Koden måste vara korrekt indenterad då den blir lättare att läsa vilket gör det lättare att hitta syntaktiska fel.
 
 ```
-function errorCallback(error) {
-    switch(error.code) {
-        case error.PERMISSION_DENIED:
-            // Geolocation API stöds inte, gör något
-            break;
-        case error.POSITION_UNAVAILABLE:
-            // Misslyckat positionsanrop, gör något
-            break;
-        case error.UNKNOWN_ERROR:
-            // Okänt fel, gör något
-            break;
-    }
-}
+<ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:contentDescription="his logo"
+            app:layout_constraintBottom_toBottomOf="@id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/plupp" />
 ```
+I kodsnutten syns koden för min imageview. Där har jag satt ett namn/id som kan användas för att referera till bilden när man exempelvis ska sätta constraints. Sedan har jag satt bildens brädd och höjd. En contentdescription behövdes för att beskriva bilden och sedan använder jag mig av olika positioneringsconstraints för att placera bilden i min layout gentemot, i det här fallet, knappen och parentramen. Slutligen hänvisar srcCompat till den specifika bilden jag vill visa i imageviewn.
 
-Bilder läggs i samma mapp som markdown-filen.
-
-![](android.png)
-
-Läs gärna:
-
-- Boulos, M.N.K., Warren, J., Gong, J. & Yue, P. (2010) Web GIS in practice VIII: HTML5 and the canvas element for interactive online mapping. International journal of health geographics 9, 14. Shin, Y. &
-- Wunsche, B.C. (2013) A smartphone-based golf simulation exercise game for supporting arthritis patients. 2013 28th International Conference of Image and Vision Computing New Zealand (IVCNZ), IEEE, pp. 459–464.
-- Wohlin, C., Runeson, P., Höst, M., Ohlsson, M.C., Regnell, B., Wesslén, A. (2012) Experimentation in Software Engineering, Berlin, Heidelberg: Springer Berlin Heidelberg.
+![](Screenshot_20240412_154042.png)
